@@ -1,0 +1,21 @@
+:root {
+  /* Light mode variables */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --dark: #1e293b;
+  --light: #f9f9f9;
+  --gray: #e2e8f0;
+  --text: #333;
+  --text-light: #f8fafc;
+  --max-width: 800px;
+}
+
+.dark {
+  /* Dark mode variables */
+  --primary: #3b82f6;
+  --primary-dark: #60a5fa;
+  --dark: #0f172a;
+  --light: #1e293b;
+  --gray: #334155;
+  --text: #f8fafc;
+}
