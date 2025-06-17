@@ -3,6 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <section className="contact-section">
+      <h2>Contacts</h2>
       <div className="contact-container">
         {/* Email */}
         <div className="contact-item">

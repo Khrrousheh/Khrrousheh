@@ -46,13 +46,6 @@ export default function Home(){
       </section>
 
       <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:mahdi.khrrousheh@gmail.com">mahdi.khrrousheh@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/Khrrousheh" target="_blank" rel="noopener noreferrer">github.com/Khrrousheh</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/Khrrousheh" target="_blank" rel="noopener noreferrer">linkedin.com/in/Khrrousheh</a></p>
-      </section>
-
-      <section>
         <Contact />
       </section>
     </div>
