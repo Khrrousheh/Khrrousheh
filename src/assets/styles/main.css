@@ -1,0 +1,242 @@
+@import './variables.css';
+
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark body {
+  background-color: var(--dark);
+  color: var(--text-light);
+}
+
+/* Header styles */
+header {
+  background: var(--dark);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Container styles */
+.container {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Project Card Styles */
+.project-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.dark .project-card {
+  background: #334155;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--text-color, #1e293b);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.project-tags {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.skill-tag {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+/* New class for the floating image */
+.floating-image {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: 0.3;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.project-card:hover .floating-image {
+  transform: scale(1.05);
+  opacity: 0.5;
+}
+
+.project-image {
+  height: 60px;
+  width: auto;
+  border-radius: 8px;
+  /* object-fit: cover; */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--gray);
+  margin-top: 4rem;
+  transition: all 0.3s ease;
+}
+
+.dark footer {
+  background: var(--gray);
+  color: var(--text-light);
+}
+
+/* Link styles */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Skills styles */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: var(--gray);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.dark .skill-tag {
+  background: var(--gray);
+  color: var(--text-light);
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  header {
+    padding: 1.5rem;
+  }
+}
+
+/* contact me styles */
+
+.contact-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to ensure all items stay in one row */
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-item {
+  flex: 1; /* Allow items to grow and shrink equally */
+  min-width: 0; /* Allow items to shrink below their intrinsic width */
+  max-width: none; /* Remove maximum width constraint */
+  box-sizing: border-box;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #f0f4f8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+}
+
+.icon-circle img {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-item h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.contact-item p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  .contact-item {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+}
+
+
