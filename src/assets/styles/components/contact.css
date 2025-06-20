@@ -1,0 +1,27 @@
+/* contact.module.css */
+.contact-section {
+  padding: 2rem 0;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.contact-link {
+  color: var(--primary);
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,14 @@
+/* Minimal modern reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img, picture, svg {
+  max-width: 100%;
+  display: block;
+}
