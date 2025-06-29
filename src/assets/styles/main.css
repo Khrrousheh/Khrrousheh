@@ -273,6 +273,57 @@ h2{
   }
 }
 
+
+/* ================
+    Badges
+   ================ */
+   .badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--gray);
+  border-radius: 12px;
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.badge-item:hover {
+  transform: translateY(-3px);
+}
+
+.badge-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.badge-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .badges-container {
+    gap: 0.75rem;
+  }
+  
+  .badge-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /* ================
    Utilities
    ================ */
