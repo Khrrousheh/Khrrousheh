@@ -5,7 +5,7 @@
 
 .contact-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 2rem;
   margin-top: 1.5rem;
 }
@@ -23,5 +23,11 @@
   &:hover {
     color: var(--primary-dark);
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
   }
 }
