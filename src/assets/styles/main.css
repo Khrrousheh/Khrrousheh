@@ -410,3 +410,121 @@ h2{
 .dark .page-indicator {
   color: var(--text-light);
 }
+
+/* ================
+   Badge Carousel
+   ================ */
+.badge-carousel-container {
+  position: relative;
+  margin: 3rem 0;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.badges-wrapper {
+  overflow: hidden;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+}
+
+.badges-slide {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  animation: slideAnimation 16s infinite linear;
+}
+
+@keyframes slideAnimation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.badge-item {
+  flex: 0 0 calc(12.5% - 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  transition: var(--transition);
+  min-width: 0;
+}
+
+.badge-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.badge-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.badge-item:hover {
+  transform: translateY(-5px);
+}
+
+.badge-item:hover .badge-image {
+  transform: scale(1.1);
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.carousel-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.75rem;
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gray);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.indicator-dot.active {
+  background: var(--primary);
+  transform: scale(1.2);
+}
+
+.indicator-dot:hover {
+  background: var(--primary-dark);
+}

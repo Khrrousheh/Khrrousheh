@@ -3,6 +3,7 @@ import ProjectCard from '../components/ProjectCard';
 import Contact from '../components/Contact';
 import ProjectPagination from '../components/ProjectPagination';
 import Badges from '../components/Badges';
+import BadgeCarousel from '../components/BadgeCarousel';
 
 export default function Home(){
     // Define the list of projects
@@ -66,7 +67,7 @@ export default function Home(){
 
        {/* Tech Badges Section */}
        <section>
-         <Badges badges={techBadges} />
+         <BadgeCarousel badges={techBadges} autoSlideInterval={5000} />
        </section>
 
       {/* Featured Projects Section, now using the pagination component */}
