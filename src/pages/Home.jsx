@@ -32,6 +32,12 @@ export default function Home(){
       imageUrl: "https://huggingface.co/front/assets/huggingface_logo.svg",
       skills_list: ['Backend', 'LLM', 'Microservices']
     },
+    {
+        title: "Flask notebook",
+        description: "Developed a lightweight, Flask-based RESTful API for personal note management, demonstrating proficiency in microservice architecture and core Flask functionalities",
+        imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+        skills_list: ["Backend", "GitHub Actions", "Microservices"]
+    },
 
     {
       title: "Portfolio",
