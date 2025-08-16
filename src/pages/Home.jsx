@@ -8,6 +8,12 @@ import BadgeCarousel from '../components/BadgeCarousel';
 export default function Home(){
     // Define the list of projects
     const projects = [
+        {
+      title: "Scrimba Projects in one place",
+      description: "Take the learn react course on scrimba and do a descriptive website about the course content.",
+      imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      skills_list: ['React', 'Frontend Development', 'Responsive Design']
+    },
     {
       title: "Heart Disease Risk Assessment",
       description: "This is a web-based application built using FastAPI and Jinja2 that calculates the 10-year cardiovascular disease (CVD) risk using the Framingham Risk Score algorithm. It supports input for various risk factors and provides personalized health recommendations based on the calculated risk level.",
@@ -61,7 +67,8 @@ export default function Home(){
     { name: 'Docker', imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
     { name: 'Git', imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
     { name: 'JavaScript', imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-  ];
+        {name: 'React Js', imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'}
+    ];
 
   return (
     <div className="container">
