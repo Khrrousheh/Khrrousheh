@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Mahdi Khrrousheh
 
-🎯 Junior/Mid-Level Software Developer | Backend & Cloud Enthusiast  
+🎯 Mid/Senior-Level Software Developer | Backend & Cloud Enthusiast | agentic development  
 📍 Based in Ramallah, Palestine  
 🌐 [LinkedIn](https://www.linkedin.com/in/Khrrousheh) • [GitHub](https://github.com/Khrrousheh) • 📧 mahdi.khrrousheh@gmail.com
 
