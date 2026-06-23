@@ -1,5 +1,6 @@
-import { MdEmail, MdPhone } from "react-icons/md"
-import { FaLinkedin, FaGithub } from "react-icons/fa"
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdEmail, MdPhone } from 'react-icons/md'
+
 
 export function Footer() {
   return (
@@ -34,16 +35,15 @@ export function Footer() {
               LinkedIn
             </a>
 
-            <div className="pill" flex gap-1 items-center>
-            <FaGithub />
             <a
+              className="pill"
               href="https://github.com/Khrrousheh"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <FaGithub />
               GitHub
             </a>
-            </div>
           </div>
         </div>
 

@@ -1,10 +1,31 @@
 export const roles = [
-  "AI Software Engineer",
-  "Full Stack Engineer",
-  "Python Engineer",
-  "Backend Engineer",
-  "Cloud Manager",
-];
+  'AI Software Engineer',
+  'Full Stack Engineer',
+  'Python Engineer',
+  'Backend Engineer',
+  'Cloud Manager',
+]
+
+export const technologies = [
+  'Python',
+  'AWS',
+  'Django',
+  'FastAPI',
+  'ChatGPT',
+  'Gemini',
+  'GCP',
+  'Azure',
+  'Github',
+]
+
+export const roleTechnologies = {
+  'AI Software Engineer': ['Python', 'FastAPI', 'ChatGPT', 'Gemini', 'GCP', 'Github'],
+  'Full Stack Engineer': ['Python', 'Django', 'FastAPI', 'AWS', 'Azure', 'Github'],
+  'Python Engineer': ['Python', 'Django', 'FastAPI', 'AWS', 'Github'],
+  'Backend Engineer': ['Python', 'Django', 'FastAPI', 'AWS', 'Azure', 'Github'],
+  'Cloud Manager': ['AWS', 'GCP', 'Azure', 'Github', 'Python'],
+}
+
 export const contactLinks = [
   {
     label: 'mahdi.khrrousheh@gmail.com',
