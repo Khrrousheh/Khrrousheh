@@ -205,6 +205,11 @@ h2 {
     border-color 0.2s ease,
     background 0.2s ease,
     transform 0.2s ease;
+
+  /* ✅ added for icon + text alignment */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .pill:hover {
@@ -228,6 +233,7 @@ h2 {
   cursor: default;
 }
 
+/* keep disabled hover behavior */
 .location-pill:hover {
   transform: none;
 }

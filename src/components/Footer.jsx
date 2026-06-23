@@ -1,3 +1,6 @@
+import { MdEmail, MdPhone } from "react-icons/md"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
+
 export function Footer() {
   return (
     <footer id="contact">
@@ -9,31 +12,41 @@ export function Footer() {
             Open to backend and AI/agentic engineering roles - happy to talk through a specific
             pipeline, a system design problem, or just trade notes on hallucination mitigation.
           </p>
+
           <div className="contact-pills">
             <a className="pill primary" href="mailto:mahdi.khrrousheh@gmail.com">
+              <MdEmail />
               Email me
             </a>
+
             <a className="pill" href="tel:+972598633610">
+              <MdPhone />
               Call / WhatsApp
             </a>
+
             <a
               className="pill"
               href="https://linkedin.com/in/khrrousheh/"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <FaLinkedin />
               LinkedIn
             </a>
+
+            <div className="pill" flex gap-1 items-center>
+            <FaGithub />
             <a
-              className="pill"
               href="https://github.com/Khrrousheh"
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
             </a>
+            </div>
           </div>
         </div>
+
         <div className="foot-note">
           Mahdi Khrrousheh - Ramallah, Palestine - built as a React portfolio, no tracking, no
           analytics.
