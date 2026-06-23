@@ -1,4 +1,5 @@
 import { contactLinks } from '../data/portfolio'
+import HeroRole from './HeroRole'
 import { Pipeline } from './Pipeline'
 
 function HeroLink({ link }) {
@@ -18,9 +19,7 @@ export function Hero({ compact = false }) {
   return (
     <header className={`hero ${compact ? 'compact-hero' : ''}`.trim()}>
       <div className="wrap">
-        <div className="hero-eyebrow">
-          <span className="key">role:</span> <span className="val">"ai_software_engineer"</span>
-        </div>
+        <HeroRole />
         <h1>Mahdi Khrrousheh</h1>
         <div className="role-line">
           backend & full-stack engineer - LLM systems, agentic AI, structured pipelines

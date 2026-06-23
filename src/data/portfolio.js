@@ -1,3 +1,10 @@
+export const roles = [
+  "AI Software Engineer",
+  "Full Stack Engineer",
+  "Python Engineer",
+  "Backend Engineer",
+  "Cloud Manager",
+];
 export const contactLinks = [
   {
     label: 'mahdi.khrrousheh@gmail.com',
@@ -13,11 +20,6 @@ export const contactLinks = [
   {
     label: 'GitHub',
     href: 'https://github.com/Khrrousheh',
-    external: true,
-  },
-  {
-    label: 'Portfolio site',
-    href: 'https://khrrousheh.github.io/Khrrousheh/',
     external: true,
   },
 ]
@@ -213,7 +215,7 @@ export const credentials = [
 export const languages = [
   ['Arabic', 'Native'],
   ['English', 'Professional'],
-  ['Hebrew', 'Basic (A1)'],
+  ['Hebrew', 'Above Basic (A2)'],
 ]
 
 export const interests = [
