@@ -1,45 +1,42 @@
-import { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Home from './pages/Home';
-import Footer from './components/Footer';
-import './assets/styles/main.css';
+import { useEffect } from 'react'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import './App.css'
+import { Layout } from './components/Layout'
+import { About } from './pages/About'
+import { Contact } from './pages/Contact'
+import { Credentials } from './pages/Credentials'
+import { Experience } from './pages/Experience'
+import { Home } from './pages/Home'
+import { Projects } from './pages/Projects'
+import { Skills } from './pages/Skills'
 
-function App() {
-  // Initialize state with user preference or system preference
-  const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage for saved preference
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode !== null) {
-      return JSON.parse(savedMode);
-    }
-    // Check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+function ScrollToTop() {
+  const location = useLocation()
 
-  // Apply dark mode class to document and save preference
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      document.body.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.body.classList.remove('dark');
-    }
-    // Save preference to localStorage
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
-  }, [darkMode]);
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }, [location.pathname])
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  return (
-    <div className={`app ${darkMode ? 'dark' : ''}`}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Home />
-      <Footer />
-    </div>
-  );
+  return null
 }
 
-export default App;
+function App() {
+  return (
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="credentials" element={<Credentials />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default App

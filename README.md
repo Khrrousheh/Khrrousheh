@@ -1,59 +1,16 @@
-# 👋 Hi, I'm Mahdi Khrrousheh
+# React + Vite
 
-🎯 Mid/Senior-Level Software Developer | Backend & Cloud Enthusiast | agentic development  
-📍 Based in Ramallah, Palestine  
-🌐 [LinkedIn](https://www.linkedin.com/in/Khrrousheh) • [GitHub](https://github.com/Khrrousheh) • 📧 mahdi.khrrousheh@gmail.com
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🛠️ Tech Stack
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- **Languages:** Python, SQL, JavaScript, Java
-- **Backend:** Django, FastAPI, REST APIs
-- **Frontend:** React (basic), AJAX
-- **Databases:** PostgreSQL, MongoDB, Redis
-- **Cloud Platforms:** AWS (EC2, S3, IAM, VPC), Azure, Google Cloud
-- **DevOps:** Docker, GitHub Actions, GitLab CI/CD, Linux, Shell
-- **Tools:** Git, VSCode, Postman, Jupyter
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🚀 Featured Projects
+## Expanding the ESLint configuration
 
-### 🔍 Health Quality Management System  
-**Tech:** Python, Django, PostgreSQL  
-📄 Developed for a healthcare client with a focus on data integrity and scalable backend architecture.
-
-### 🌐 Cloud-Based Backup & Storage Planner  
-**Tech:** AWS (S3, EC2), Python, Linux  
-☁️ Built and deployed cloud solutions for organizations to automate data backup and security.
-
-### 📊 Data Analysis & AI Prototypes  
-**Tech:** Pandas, TensorFlow, Hugging Face, OpenAI API  
-🧠 Researched and built proof-of-concept apps using generative AI, transformers, and attention mechanisms.
-
----
-
-## 📚 Certifications & Programs
-
-- 🟧 **AWS re/Start Graduate** – Cloud fundamentals, EC2/S3/VPC/IAM
-- 🎓 **B.Sc. Computer Science** – Al-Quds University (2016–2020)
-- 🧠 **McKinsey Forward Program** – Problem-solving, digital fluency
-- 🧪 **Google Cloud AI Courses** – Generative AI & Attention Mechanism
-
----
-
-## 🔍 About Me
-
-I’m a curious and motivated backend engineer passionate about building real-world systems and cloud-native applications. I enjoy working on cross-border projects and learning from diverse teams.
-
-I'm currently open to **full-time, hybrid opportunities in software engineering**.
-
----
-
-## 📫 Let's Connect
-
-- 💼 [LinkedIn](https://www.linkedin.com/in/Khrrousheh)
-- 🌍 [GitHub](https://github.com/Khrrousheh)
-- 📧 Email: mahdi.khrrousheh@gmail.com
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
