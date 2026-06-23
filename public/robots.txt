@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khrrousheh.github.io/Khrrousheh/sitemap.xml

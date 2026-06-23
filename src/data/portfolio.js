@@ -73,6 +73,24 @@ export const stats = [
   { number: '3', label: 'AI agent systems shipped or in build' },
 ]
 
+export const answerHighlights = [
+  {
+    question: 'Who is Mahdi Khrrousheh?',
+    answer:
+      'Mahdi Khrrousheh is an AI software engineer and backend engineer based in Ramallah, focused on Python backends, LLM agents, structured output validation, RAG, and cloud systems.',
+  },
+  {
+    question: 'What does he build?',
+    answer:
+      'He builds agent pipelines, prompt-controlled assistants, RAG chatbots, FastAPI services, Django REST backends, validation layers, and cloud-ready internal tools.',
+  },
+  {
+    question: 'What is his strongest AI engineering focus?',
+    answer:
+      'His strongest focus is making LLM systems reliable through schemas, Pydantic validation, structured outputs, prompt constraints, and hallucination checks.',
+  },
+]
+
 export const experiences = [
       {
     date: 'May 2026 - Present',
