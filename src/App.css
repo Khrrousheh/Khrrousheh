@@ -657,13 +657,13 @@ h2 {
   margin-top: auto;
 }
 
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 48px;
+.skill-badge-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
 }
 
-.skill-group h4,
+.skill-badge-group h4,
 .cred-block h4 {
   font-family: var(--mono);
   font-size: 12.5px;
@@ -673,8 +673,361 @@ h2 {
   margin-bottom: 14px;
 }
 
-.tagrow.skills {
+.skill-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.skill-badge {
+  min-height: 214px;
+  background:
+    linear-gradient(145deg, rgba(79, 209, 174, 0.06), transparent 44%),
+    var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.skill-badge:hover {
+  border-color: rgba(79, 209, 174, 0.62);
+  transform: translateY(-2px);
+}
+
+.skill-badge-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  color: var(--teal);
+  background: rgba(79, 209, 174, 0.1);
+  border: 1px solid rgba(79, 209, 174, 0.22);
+  border-radius: 10px;
+}
+
+.skill-badge-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.skill-badge h5 {
+  font-family: var(--display);
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.skill-badge ul {
+  list-style: none;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.skill-badge li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 6px;
+}
+
+.skill-badge li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+}
+
+.competency-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin: -18px 0 28px;
+}
+
+.competency-scale {
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+}
+
+.competency-scale span {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.role-filter {
+  display: grid;
+  gap: 8px;
+  min-width: 220px;
+}
+
+.role-filter span {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.role-filter select {
+  width: 100%;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font: 13px var(--mono);
+}
+
+.role-filter select:hover,
+.role-filter select:focus {
+  border-color: rgba(79, 209, 174, 0.7);
+}
+
+.competency-layout {
+  --competency-panel-height: 560px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.competency-table-wrap {
+  height: var(--competency-panel-height);
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79, 209, 174, 0.62) rgba(28, 37, 49, 0.72);
+}
+
+.competency-table-wrap::-webkit-scrollbar,
+.radar-legend::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.competency-table-wrap::-webkit-scrollbar-track,
+.radar-legend::-webkit-scrollbar-track {
+  background: rgba(28, 37, 49, 0.72);
+  border-radius: 999px;
+}
+
+.competency-table-wrap::-webkit-scrollbar-thumb,
+.radar-legend::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(79, 209, 174, 0.86), rgba(232, 150, 90, 0.7));
+  border: 2px solid rgba(28, 37, 49, 0.96);
+  border-radius: 999px;
+}
+
+.competency-table-wrap::-webkit-scrollbar-thumb:hover,
+.radar-legend::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--teal), var(--amber));
+}
+
+.competency-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.competency-table caption {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.competency-table th,
+.competency-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  font-size: 13.5px;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.competency-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  background: rgba(28, 37, 49, 0.84);
+  backdrop-filter: blur(8px);
+}
+
+.competency-table th:nth-child(1),
+.competency-table td:nth-child(1) {
+  width: 28%;
+}
+
+.competency-table th:nth-child(2),
+.competency-table td:nth-child(2) {
+  width: 18%;
+}
+
+.competency-table th:nth-child(3),
+.competency-table td:nth-child(3) {
+  width: 16%;
+}
+
+.competency-table th:nth-child(4),
+.competency-table td:nth-child(4) {
+  width: 38%;
+}
+
+.competency-table td:first-child {
+  color: var(--text);
+}
+
+.competency-table td:last-child {
+  color: var(--text-muted);
+}
+
+.competency-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.level-pill {
+  display: inline-flex;
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--amber);
+  background: rgba(232, 150, 90, 0.1);
+  border: 1px solid rgba(232, 150, 90, 0.2);
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+
+.level-meter {
+  display: flex;
+  gap: 4px;
+  min-width: 88px;
+  padding-top: 5px;
+}
+
+.level-meter span {
+  width: 13px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(139, 150, 168, 0.24);
+}
+
+.level-meter span.filled {
+  background: var(--teal);
+}
+
+.radar-card {
+  height: var(--competency-panel-height);
+  min-height: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.radar-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.radar-heading h3 {
+  font-size: 18px;
+}
+
+.radar-heading span {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.radar-chart {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  max-height: 320px;
+  margin: 0 auto;
+  overflow: visible;
+  flex: 0 0 auto;
+}
+
+.radar-ring {
+  fill: none;
+  stroke: rgba(139, 150, 168, 0.18);
+  stroke-width: 1;
+}
+
+.radar-axis {
+  stroke: rgba(139, 150, 168, 0.16);
+  stroke-width: 1;
+}
+
+.radar-area {
+  fill: rgba(79, 209, 174, 0.18);
+  stroke: var(--teal);
+  stroke-width: 2;
+}
+
+.radar-point {
+  fill: var(--amber);
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.radar-label {
+  fill: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.radar-legend {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79, 209, 174, 0.62) rgba(28, 37, 49, 0.72);
+}
+
+.radar-score {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.radar-score b {
+  color: var(--text);
+  font-family: var(--mono);
 }
 
 .cred-grid {
@@ -778,11 +1131,23 @@ footer {
   .project-grid {
     grid-template-columns: 1fr;
   }
+
+  .skill-badge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .competency-layout {
+    grid-template-columns: 1fr;
+    --competency-panel-height: 520px;
+  }
+
+  .radar-card {
+    max-width: 560px;
+  }
 }
 
 @media (max-width: 760px) {
   .about-grid,
-  .skill-grid,
   .cred-grid {
     grid-template-columns: 1fr;
   }
@@ -868,6 +1233,61 @@ footer {
   .tech-cell svg {
     width: 23px;
     height: 23px;
+  }
+
+  .skill-badge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-badge {
+    min-height: auto;
+  }
+
+  .competency-toolbar {
+    flex-direction: column;
+    margin-top: -10px;
+  }
+
+  .competency-layout {
+    --competency-panel-height: 480px;
+  }
+
+  .competency-table th,
+  .competency-table td {
+    padding: 12px 10px;
+    font-size: 12.5px;
+  }
+
+  .competency-table th:nth-child(1),
+  .competency-table td:nth-child(1) {
+    width: 30%;
+  }
+
+  .competency-table th:nth-child(2),
+  .competency-table td:nth-child(2) {
+    width: 20%;
+  }
+
+  .competency-table th:nth-child(3),
+  .competency-table td:nth-child(3) {
+    width: 18%;
+  }
+
+  .competency-table th:nth-child(4),
+  .competency-table td:nth-child(4) {
+    width: 32%;
+  }
+
+  .level-meter {
+    min-width: 66px;
+  }
+
+  .level-meter span {
+    width: 9px;
+  }
+
+  .role-filter {
+    width: 100%;
   }
 
   .timeline::before {
