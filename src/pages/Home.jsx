@@ -1,4 +1,5 @@
 import { AboutSection } from '../components/AboutSection'
+import { AnswerSummary } from '../components/AnswerSummary'
 import { CredentialsSection } from '../components/CredentialsSection'
 import { ExperienceSection } from '../components/ExperienceSection'
 import { Hero } from '../components/Hero'
@@ -10,6 +11,7 @@ export function Home() {
     <>
       <Hero />
       <AboutSection />
+      <AnswerSummary />
       <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />

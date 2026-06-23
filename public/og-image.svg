@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Mahdi Khrrousheh - AI Software Engineer</title>
+  <desc id="desc">Open graph preview image for Mahdi Khrrousheh portfolio.</desc>
+  <rect width="1200" height="630" fill="#0d1117"/>
+  <path d="M0 500h1200v130H0z" fill="#151c26"/>
+  <path d="M855 0h345v630H855z" fill="#101720"/>
+  <g fill="none" stroke="#27313e" stroke-width="2" opacity=".9">
+    <path d="M905 80h190v70H905zM955 205h190v70H955zM890 330h190v70H890z"/>
+    <path d="M1095 115h35v125h-35M955 240h-35v125h35"/>
+  </g>
+  <circle cx="905" cy="115" r="8" fill="#4fd1ae"/>
+  <circle cx="955" cy="240" r="8" fill="#e8965a"/>
+  <circle cx="890" cy="365" r="8" fill="#4fd1ae"/>
+  <text x="80" y="138" fill="#4fd1ae" font-family="JetBrains Mono, Consolas, monospace" font-size="26">~/khrrousheh</text>
+  <text x="80" y="245" fill="#e7ebf0" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="72" font-weight="700">Mahdi</text>
+  <text x="80" y="326" fill="#e7ebf0" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="72" font-weight="700">Khrrousheh</text>
+  <text x="84" y="394" fill="#8b96a8" font-family="Inter, Arial, sans-serif" font-size="31">AI Software Engineer / Backend Engineer</text>
+  <text x="84" y="465" fill="#e8965a" font-family="JetBrains Mono, Consolas, monospace" font-size="25">Python - FastAPI - LLM agents - RAG - Cloud systems</text>
+  <text x="80" y="565" fill="#8b96a8" font-family="JetBrains Mono, Consolas, monospace" font-size="21">Ramallah | github.com/Khrrousheh | linkedin.com/in/khrrousheh</text>
+</svg>

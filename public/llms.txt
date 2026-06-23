@@ -1,0 +1,28 @@
+# Mahdi Khrrousheh
+
+Mahdi Khrrousheh is an AI software engineer and backend engineer based in Ramallah.
+
+## Primary Expertise
+
+- AI agent pipelines and LLM workflow orchestration
+- Structured output validation with schemas and Pydantic
+- Python backend systems with FastAPI, Django REST Framework, and Flask
+- Retrieval-augmented generation, prompt engineering, and hallucination mitigation
+- Cloud systems across AWS, GCP, Azure, Firebase, Docker, and CI/CD
+- Full-stack product work with React, TypeScript, TailwindCSS, and ShadCN
+
+## Notable Projects
+
+- AI Resume Processing Agents: two-stage resume parsing and profile conversion pipeline with prompt constraints and Pydantic validation.
+- AI Psychological Companion: CBT-grounded MVP using FastAPI, LangChain, LangSmith, Pydantic, Gemini/LLM APIs, and planned RAG grounding.
+- AidNexus First-Aid Assistant: Gemini and GCP based assistant for contextual first-aid guidance with structured prompt control.
+
+## Contact
+
+- Email: mahdi.khrrousheh@gmail.com
+- LinkedIn: https://linkedin.com/in/khrrousheh/
+- GitHub: https://github.com/Khrrousheh
+
+## Canonical Site
+
+https://khrrousheh.github.io/Khrrousheh/

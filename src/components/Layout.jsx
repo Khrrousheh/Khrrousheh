@@ -1,5 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { defaultSeoPage, seoPages } from '../data/seo'
 import { Footer } from './Footer'
+import { Seo } from './Seo'
 
 const navItems = [
   ['about', '/about'],
@@ -12,9 +14,12 @@ const navItems = [
 
 export function Layout() {
   const location = useLocation()
+  const page = seoPages[location.pathname] || defaultSeoPage
 
   return (
     <>
+      <Seo page={page} />
+
       <nav>
         <div className="nav-inner">
           <NavLink className="nav-id" to="/" aria-label="Mahdi Khrrousheh home">
