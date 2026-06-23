@@ -5,9 +5,11 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const isGitHubActions = Boolean(globalThis.process?.env?.GITHUB_ACTIONS)
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: isGitHubActions ? '/Khrrousheh/' : '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
